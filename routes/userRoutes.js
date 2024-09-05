@@ -7,6 +7,6 @@ router.post('/register', registerUser);
 router.post('/login', loginUser);
 
 // Ruta para subir una imagen
-router.post('/upload', upload.single('file'), uploadFile);
+// router.post('/upload', upload.single('file'), uploadFile); "Mala linea"
 
 module.exports = router;
