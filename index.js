@@ -1,6 +1,7 @@
 const express = require('express');
 const connectDB = require('./config/db');
 const userRoutes = require('./routes/userRoutes');
+const postRoutes = require('./routes/postRoutes');
 const carpetsRoutes = require('./routes/carpetsRoutes');
 const cors = require('cors');
 require('dotenv').config();
@@ -12,6 +13,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/api/users', userRoutes);
+app.use('/api/post', postRoutes);
 app.use('/api/carpets', carpetsRoutes);
 
 const PORT = process.env.PORT || 5000;
